@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     match '/scrape', to: 'quotes#scrape', via: :post, on: :collection
     match '/:tags', to: 'quotes#search', via: :get, on: :collection
   end
+
+  root to: 'quote#index'
 end
